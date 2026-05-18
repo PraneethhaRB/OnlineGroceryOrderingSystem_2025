@@ -69,7 +69,7 @@ export default function VendorLogin({ onLogin }) {
 
     try {
       const { vendor, token } = await vendorLogin({ email, password });
-
+      localStorage.setItem("token", token);
       onLogin(vendor); // store in state/context
 
       navigate("/vendor-dashboard"); // redirect after login
