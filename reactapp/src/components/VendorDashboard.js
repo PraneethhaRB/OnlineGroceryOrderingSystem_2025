@@ -38,12 +38,15 @@ export default function VendorDashboard({ vendor }) {
     const data = await getOrdersByVendor(vendor.id);
     setOrders(data);
   };
-// eslint-disable-next-line react-hooks/exhaustive-deps 
-  useEffect(() => {
-    fetchProducts();
-    fetchOrders();
-  }, [vendor]);
 
+  // useEffect(() => {
+  //   fetchProducts();
+  //   fetchOrders();
+  // }, [vendor]);
+  useEffect(() => {
+    fetchOrders();
+    fetchProducts();
+  }, [fetchOrders, fetchProducts]);
   // Form handling
   const handleChange = (e) => {
     const { name, value } = e.target;
