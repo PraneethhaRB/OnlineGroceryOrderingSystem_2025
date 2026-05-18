@@ -166,9 +166,13 @@ const api = axios.create({
 
 // Attach JWT token to every request if it exists
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("jwtToken");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+  // Vercel may render parts of the app on the server during build/SSR.
+  // Guard browser-only APIs.
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
   }
   return config;
 });
@@ -256,9 +260,11 @@ export const vendorLogin = async ({ email, password }) => {
   const res = await axios.post("http://localhost:8080/vendors/login", { email, password });
   const { vendor, token } = res.data;
 
-  // Store JWT for authenticated requests
-  localStorage.setItem("jwtToken", token);
-  localStorage.setItem("vendorInfo", JSON.stringify(vendor));
+  // Store JWT for authenticated requests (browser only)
+  if (typeof window !== "undefined") {
+    localStorage.setItem("jwtToken", token);
+    localStorage.setItem("vendorInfo", JSON.stringify(vendor));
+  }
 
   return { vendor, token };
 };
