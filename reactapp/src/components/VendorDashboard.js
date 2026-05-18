@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./VendorDashboard.css";
 import {
@@ -26,18 +26,18 @@ export default function VendorDashboard({ vendor }) {
   const [editing, setEditing] = useState(false);
 
   // Fetch products
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     if (!vendor) return;
     const data = await getProductsByVendor(vendor.id);
     setProducts(data);
-  };
+  }, [vendor]);
 
   // Fetch orders
-  const fetchOrders = async () => {
+  const fetchOrders = useCallback(async () => {
     if (!vendor) return;
     const data = await getOrdersByVendor(vendor.id);
     setOrders(data);
-  };
+  }, [vendor]);
 
   // useEffect(() => {
   //   fetchProducts();
