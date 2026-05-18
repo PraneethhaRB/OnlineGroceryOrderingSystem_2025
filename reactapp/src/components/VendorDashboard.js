@@ -38,7 +38,7 @@ export default function VendorDashboard({ vendor }) {
     const data = await getOrdersByVendor(vendor.id);
     setOrders(data);
   };
-// eslint-disable-next-line react-hooks/exhaustive-deps
+// eslint-disable-next-line react-hooks/exhaustive-deps 
   useEffect(() => {
     fetchProducts();
     fetchOrders();
