@@ -1,0 +1,125 @@
+/* .order-confirmation {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 24px;
+  border: 2px solid #4caf50;
+  border-radius: 12px;
+  background: #e8f5e9;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.order-confirmation h2 {
+  color: #2e7d32;
+  margin-bottom: 16px;
+}
+
+.order-confirmation p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #333;
+} */
+/* OrderConfirmation.css */
+/* OrderConfirmation.css */
+.order-confirmation {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid #10b981;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-confirmation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #06b6d4, #ec4899, #06b6d4);
+}
+
+.order-confirmation h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #065f46;
+  margin-bottom: 1rem;
+}
+
+.order-confirmation::after {
+  content: "✓";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.confirmation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.confirmation-item {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #d1fae5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confirmation-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.confirmation-value {
+  font-weight: 700;
+  color: #065f46;
+  font-size: 1.1rem;
+}
+
+[data-testid="confirmation-id"] .confirmation-value {
+  font-family: "Monaco", monospace;
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+[data-testid="confirmation-total"] .confirmation-value {
+  font-size: 1.5rem;
+  color: #ec4899;
+}
+
+@media (max-width: 768px) {
+  .order-confirmation {
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .order-confirmation h2 {
+    font-size: 2rem;
+  }
+}

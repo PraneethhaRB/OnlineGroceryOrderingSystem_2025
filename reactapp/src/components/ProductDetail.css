@@ -1,0 +1,111 @@
+/* .product-detail {
+  max-width: 600px;
+  margin: 30px auto;
+  border: 1px solid #e0e0e0;
+  padding: 24px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Roboto', sans-serif;
+}
+
+.product-detail h2 {
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.product-detail p {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.product-detail input {
+  width: 80px;
+  margin: 12px 0;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.product-detail button {
+  background: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-detail button:hover {
+  background: #1976d2;
+} */
+/* ProductDetail.css */
+/* ProductDetail.css */
+/* ProductDetail.css */
+
+[data-testid="product-detail-container"] {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+[data-testid="product-detail-container"] h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+[data-testid="product-detail-container"] p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+
+[data-testid="detail-stock-status"] {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+[data-testid="detail-stock-status"].in-stock {
+  color: green;
+}
+
+[data-testid="detail-stock-status"].out-of-stock {
+  color: red;
+}
+
+[data-testid="quantity-input"] {
+  width: 80px;
+  padding: 6px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+[data-testid="add-to-cart-btn"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+[data-testid="add-to-cart-btn"]:hover {
+  background-color: #0056b3;
+}
+
+[data-testid="add-to-cart-btn"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+

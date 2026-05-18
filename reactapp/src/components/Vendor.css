@@ -1,0 +1,87 @@
+/* Fullscreen background */
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    background: url("https://images.unsplash.com/photo-1728396554779-845627e53861?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+
+      no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Add blur overlay */
+  .login-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(2px); /* ✅ blur effect */
+    background-color: rgba(0, 0, 0, 0.3); /* subtle dark overlay */
+  }
+  
+  /* Glassmorphism card */
+  .login-card {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+  }
+  
+  /* Headings */
+  .login-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .login-card .subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+  }
+  
+  /* Error message */
+  .error {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Inputs */
+  .login-card input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.6rem 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+  }
+  
+  /* Button */
+  .login-card button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-card button:hover {
+    background: linear-gradient(135deg, #66bb6a, #388e3c);
+  }
+  

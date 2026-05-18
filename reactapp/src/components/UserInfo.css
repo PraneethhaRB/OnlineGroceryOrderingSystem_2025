@@ -1,0 +1,28 @@
+.user-info-card {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.user-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.user-details p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
